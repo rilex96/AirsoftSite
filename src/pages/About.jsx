@@ -11,11 +11,11 @@ const About = () => {
                         opreme, terena i modova igre
                     </h2>
                 </div>
-                <div className="about-column">
+                <div className="about-column" id="oprema">
                     <h2>Oprema</h2>
                     <Oprema />
                 </div>
-                <div className="about-column">
+                <div className="about-column" id="mod">
                     <h2>Modovi Igre</h2>
                     <GameMode />
                 </div>

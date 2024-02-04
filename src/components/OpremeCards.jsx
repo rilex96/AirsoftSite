@@ -9,7 +9,7 @@ const OpremeCards = ({ slika, png, naslov, tekst }) => {
             >
                 <div className="oprema-content">
                     <div className="oprema-image">
-                        <img src={png} />
+                        <img src={png} alt={naslov} />
                     </div>
                     <div className="oprema-text">
                         <div className="oprema-naslov">

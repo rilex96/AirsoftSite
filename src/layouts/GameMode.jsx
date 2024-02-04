@@ -6,35 +6,11 @@ import sim from "../assets/images/modovi/simulation.jpg";
 import snipe from "../assets/images/modovi/sniper.jpg";
 import watch from "../assets/images/modovi/watch.jpg";
 import GameModeCard from "../components/GameModeCard";
-import BulletShot from "../components/BulletShot";
-import { useEffect, useState } from "react";
 
 const GameMode = () => {
-    const [shots, setShots] = useState([]);
-    const handleShot = (e) => {
-        const { clientX, clientY } = e;
-
-        const newShot = {
-            id: Date.now(),
-            x: clientX,
-            y: clientY,
-        };
-        setShots((prevShots) => [...prevShots, newShot]);
-    };
-
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            setShots((prevShots) => prevShots.slice(1));
-        }, 3000);
-
-        return () => {
-            clearTimeout(timer);
-        };
-    }, [shots]);
     return (
         <>
-            <div className="mode-wrapper" onClick={handleShot}>
-                <BulletShot shots={shots} />
+            <div className="mode-wrapper">
                 {gameMode.map((m) => (
                     <div key={m.id}>
                         <GameModeCard
